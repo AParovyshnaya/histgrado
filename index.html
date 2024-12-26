@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Градоначальники «Истории одного города» М. Е. Салтыкова-Щедрина в истории</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/font.css">
+
+	<link rel="stylesheet" href="css/special/warnings.css" </head>
+
+<body>
+	<header>
+		<h1>Градоначальники «Истории одного города» М. Е. Салтыкова-Щедрина в истории</h1>
+	</header>
+	<section id="warning" class="notifications" hidden> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+			viewBox="0 0 24 24" fill="none" stroke="#8B6704" stroke-width="2" stroke-linecap="round"
+			stroke-linejoin="round">
+			<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+			<line x1="12" y1="9" x2="12" y2="13" />
+			<line x1="12" y1="17" x2="12.01" y2="17" />
+		</svg>База данных не загрузилась.</section>
+	<main>
+		<article class="read">
+
+		</article>
+		<article class="write"></article>
+	</main>
+	<button id="awoke">Ну давай же</button>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/sql-wasm.js"></script>
+
+	<script type="module">
+		import {download} from "./js/download/download.js"
+		document.getElementById("awoke").onclick = awoke;
+		function awoke() {
+			let request = indexedDB.open("mayors");
+			console.log(request);
+			request.onupgradeneeded = function () {
+				download();
+			};
+			request.onerror = function () {
+				console.error("Error", request.error);
+			};
+			request.onsucces = function () {
+				console.log("wake up");
+			}
+		}
+
+
+	</script>
+</body>
+
+</html>

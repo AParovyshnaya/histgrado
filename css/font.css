@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "Spectral";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+
+	src: local("Spectral"),
+		url("../fonts/spectral/Spectral-Regular.woff2") format("woff2"),
+}
+
+@font-face {
+	font-family: "Spectral";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+
+	src: local("Spectral"),
+		url("../fonts/spectral/Spectral-SemiBold.woff2") format("woff2"),
+}
+
+@font-face {
+	font-family: "Spectral";
+	font-style: italic;
+	font-weight: 600;
+	font-display: swap;
+
+	src: local("Spectral"),
+		url("../fonts/spectral/Spectral-SemiBoldItalic.woff2") format("woff2"),
+}
+
+body {
+	font-family: "Spectral", "Georgia", serif;
+}

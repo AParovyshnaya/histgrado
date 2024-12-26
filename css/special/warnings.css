@@ -1,0 +1,17 @@
+#warning[hidden] {
+	display: none;
+}
+
+#warning {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1.5rem;
+	align-content: center;
+	background-color: #FBD774;
+	color: #272838;
+	padding-left: 3rem;
+}
+
+#warning svg {
+	stroke: #8B6704;
+}

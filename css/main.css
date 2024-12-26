@@ -1,0 +1,37 @@
+html,
+body {
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	font: inherit;
+}
+
+header {
+	padding-left: 1rem;
+}
+
+main {
+	padding: 3rem 2rem;
+}
+
+section {
+	padding: 0.5rem;
+	flex: 1 1 0;
+}
+
+footer {
+	padding-left: 1rem;
+}
+
+img {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
