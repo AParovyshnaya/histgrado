@@ -1,0 +1,58 @@
+form {
+	display: flex;
+	flex-flow: column;
+	gap: 1rem;
+}
+
+input {
+	font: inherit;
+	cursor: pointer;
+}
+
+option {
+	font: inherit;
+}
+
+fieldset {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+fieldset label {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: start;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+fieldset input {
+	display: block;
+	appearance: none;
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid var(--licorice);
+	border-radius: 0.2rem;
+
+}
+
+fieldset input::after {
+	content: "";
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	background-position: center;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%231A1110' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='feather feather-check' viewBox='0 0 24 24'%3e%3cpolyline points='20 6 9 17 4 12'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	transition: 200ms;
+}
+
+fieldset input:checked::after {
+	width: 1rem;
+	height: 1rem;
+}
+
+fieldset input:disabled {
+	background-color: #EBEAEB;
+}

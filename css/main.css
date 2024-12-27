@@ -1,3 +1,7 @@
+html {
+	--licorice: #1A1110;
+}
+
 html,
 body {
 	margin: 0;
