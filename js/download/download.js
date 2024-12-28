@@ -5,7 +5,7 @@ async function _download() {
 	const sqlPromise = initSqlJs({
 	  locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0//${file}`
 	});
-	const dataPromise = fetch("./database/mayors.sql").then(res => res.arrayBuffer());
+	const dataPromise = fetch("./database/mayors.db").then(res => res.arrayBuffer());
 	const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
 	return new SQL.Database(new Uint8Array(buf));
 }
