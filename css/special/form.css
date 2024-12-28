@@ -54,5 +54,9 @@ fieldset input:checked::after {
 }
 
 fieldset input:disabled {
-	background-color: #EBEAEB;
+	background-color: var(--fast-flash);
+}
+
+#progress {
+	transition: 200ms;
 }

@@ -1,0 +1,43 @@
+table, td {
+	border-collapse: collapse;
+}
+
+thead {
+	border-bottom: 2px solid black;
+}
+
+td {
+	border-right: 1px solid var(--licorice);
+	vertical-align: top;
+	padding: 0 0.5rem;
+
+}
+
+td:last-child {
+	border: none;
+}
+
+thead td {
+	padding: 0 0.5rem;
+}
+
+th {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+thead {
+	position: relative;
+}
+
+tbody tr:nth-child(2) {
+	background-color: #D0DCD5;
+	border-top: 1px solid var(--licorice);
+	border-bottom: 1px solid var(--licorice);
+}
+
+tbody tr:nth-child(2):last-child {
+	border-bottom: none;
+}

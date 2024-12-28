@@ -1,11 +1,14 @@
 import { interview } from "./collect.js";
+import { notice } from "../report/notice.js";
+import { call } from "../download/call.js";
+import { clean } from "../draw/clean.js";
 
 export const observe = (event) => _observe(event);
 
-function _observe(event) {
+async function _observe(event) {
 	event.preventDefault();
-	const data = interview();
-	console.log(data);
-	//add deals properties
-
+	notice();
+	clean;
+	call(interview());
+	notice();
 }

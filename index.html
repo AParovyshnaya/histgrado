@@ -12,22 +12,15 @@
 	<link rel="stylesheet" href="css/font.css">
 
 	<link rel="stylesheet" href="css/special/form.css">
-	<link rel="stylesheet" href="css/special/messages.css">
+	<link rel="stylesheet" href="css/special/table.css">
 </head>
 
 <body>
 	<header>
-		<h1>Градоначальники «Истории одного города» М. Е. Салтыкова-Щедрина в истории</h1>
+		<h1>Градоначальники «Истории одного города» М. Е. Салтыкова-Щедрина в истории </h1>
 	</header>
-	<section id="warning" class="notifications" hidden> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-			viewBox="0 0 24 24" fill="none" stroke="#8B6704" stroke-width="2" stroke-linecap="round"
-			stroke-linejoin="round">
-			<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-			<line x1="12" y1="9" x2="12" y2="13" />
-			<line x1="12" y1="17" x2="12.01" y2="17" />
-		</svg>База данных не загрузилась.</section>
 	<main>
-		<article class="read">
+		<article class="ask">
 			<form id="form">
 				<div>
 					<label for="mayor">Выберите градоначальника:</label>
@@ -72,29 +65,52 @@
 					<label><input type="checkbox" value="off" id="edate" name="edate"><span>Дату окончания
 							правительства над Глуповым</span></label>
 				</fieldset>
-				<fieldset>
-					<legend>Мы покажем вам дела сего градоначальника и былью поросшие подвиги из истории государства
-						Российского. Как много вы
-						хотите видеть подробностей, господин?</legend>
-				</fieldset>
-				<button id="awoke" type="submit">Ну давай же</button>
+				Если вы изволите нажать на кнопку, то ваша милость узнает связь между богатырями русской истории и
+				градоначальниками Глупова.
+				<!--				<fieldset>-->
+				<!--					<legend>Мы покажем вам дела сего градоначальника и былью поросшие подвиги из истории государства-->
+				<!--						Российского. Как много вы-->
+				<!--						хотите видеть подробностей, господин?</legend>-->
+				<!--				</fieldset>-->
+				<button id="awoke" type="submit">Поскорее узнать</button>
+				<div id="progress" class="hidden">Разбираем почерк летописца Глупова...</div>
 			</form>
 		</article>
-		<article class="write"></article>
+		<section class="output">
+			<article id="mayor"></article>
+			<table class="deals">
+			</table>
+			<template id="head">
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+			</template>
+
+			<template id="content">
+				<tr>
+					<td></td>
+					<td></td>
+					<td class="personality"></td>
+
+				</tr>
+			</template>
+		</section>
 	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/sql-wasm.js"></script>
 
 	<script type="module">
-		import {observe} from "./js/collect/observe.js"
-
-		document.getElementById("form").addEventListener("submit", observe);
-
+		import {observe} from "./js/collect/observe.js";
+		const form = document.getElementById("form");
+		form.addEventListener("submit", observe);
 
 		//	import {awoke} from "./js/download/awoke.js";
 
 		//	document.getElementById("awoke").onclick = awoke;
 
 	</script>
+
 </body>
 
 </html>

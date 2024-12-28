@@ -1,5 +1,6 @@
 html {
 	--licorice: #1A1110;
+	--fast-flash: #EBEAEB;
 }
 
 html,
@@ -38,4 +39,8 @@ img {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+*.hidden {
+	display: none;
 }

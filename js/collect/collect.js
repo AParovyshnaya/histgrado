@@ -1,6 +1,7 @@
 export const interview = _interview;
 
 function collect(parent) {
+	//TODO: add deals properties
 	const collection = {};
 	Array.from(parent.elements)
 		.filter(field => !!field.name)
@@ -18,6 +19,6 @@ function interrogate(element) {
 function _interview() {
 	return {
 		...interrogate(document.getElementById("mayor")),
-		"mayor_properties": collect(document.getElementById("mayor_properties"))
+		"mayors_properties": collect(document.getElementById("mayor_properties"))
 	}
 }
