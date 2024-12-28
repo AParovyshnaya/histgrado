@@ -8,7 +8,7 @@ export const observe = (event) => _observe(event);
 async function _observe(event) {
 	event.preventDefault();
 	notice();
-	clean;
+	clean();
 	call(interview());
 	notice();
 }

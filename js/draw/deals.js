@@ -1,9 +1,12 @@
 export const drawDeals = (info) => _drawDeals(info);
 
 function _drawDeals(info) {
-	const table = document.querySelector("table.deals");
+	
+	const table = document.createElement("table");
+	table.classList.add("deals");
 	table.append(head(info[0].columns));
 	table.append(body(info[0].values));
+	document.querySelector("article.deals").append(table)
 }
 
 function head(elements) {
