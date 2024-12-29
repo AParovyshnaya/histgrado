@@ -1,7 +1,7 @@
 export const drawDeals = (info) => _drawDeals(info);
 
 function _drawDeals(info) {
-	
+
 	const table = document.createElement("table");
 	table.classList.add("deals");
 	table.append(head(info[0].columns));
@@ -30,6 +30,6 @@ function row(data) {
 function td(data) {
 	console.log(data);
 	const field = document.createElement("td");
-	field.textContent = data;
+	field.textContent = typeof data == "string" ? data.charAt(0).toUpperCase() + data.slice(1) : data;
 	return field;
 }
