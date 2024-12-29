@@ -1,12 +1,11 @@
-export const drawDeals = (info) => _drawDeals(info);
-
-function _drawDeals(info) {
-
+export const drawDeals = (info) => _deals(info);
+export const stand = (text, up = true) => _stand(text, up);
+function _deals(info) {
 	const table = document.createElement("table");
 	table.classList.add("deals");
 	table.append(head(info[0].columns));
 	table.append(body(info[0].values));
-	document.querySelector("article.deals").append(table)
+	document.querySelector("section.deals").append(table)
 }
 
 function head(elements) {
@@ -28,8 +27,11 @@ function row(data) {
 }
 
 function td(data) {
-	console.log(data);
 	const field = document.createElement("td");
-	field.textContent = typeof data == "string" ? data.charAt(0).toUpperCase() + data.slice(1) : data;
+	field.textContent = stand(data);
 	return field;
+}
+
+function _stand(text, up = true) {
+	return typeof text == "string" ? (up ? text.charAt(0).toUpperCase() : text.charAt(0).toLowerCase()) + text.slice(1) : text;
 }

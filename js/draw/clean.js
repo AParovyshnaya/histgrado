@@ -1,6 +1,6 @@
 export const clean = _clean;
 
 function _clean() {
-	document.querySelector("article.deals").removeChild(document.querySelector("table.deals"));
-//	document.querySelector("article.mayor").removeChild(document.querySelector("div.mayor"));
+	document.querySelector("section.deals").removeChild(document.querySelector("table.deals"));
+	document.querySelector("section.mayor").removeChild(document.querySelector("div.mayor"));
 }
