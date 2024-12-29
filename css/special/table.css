@@ -32,12 +32,8 @@ thead {
 	position: relative;
 }
 
-tbody tr:nth-child(2) {
+tbody tr:nth-child(2n) {
 	background-color: #D0DCD5;
 	border-top: 1px solid var(--licorice);
 	border-bottom: 1px solid var(--licorice);
-}
-
-tbody tr:nth-child(2):last-child {
-	border-bottom: none;
 }
