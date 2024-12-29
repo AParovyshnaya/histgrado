@@ -7,7 +7,6 @@ export const call = _call;
 
 function _call(request) {
 	let attempt = indexedDB.open("mayors");
-	console.log(attempt);
 	attempt.onupgradeneeded = function() {
 	};
 	attempt.onerror = function() {
@@ -17,7 +16,6 @@ function _call(request) {
 		const database = await download();
 		const [deals, mayor] = select(request);
 		drawDeals(database.exec(deals));
-		console.log(mayor)
 		drawMayor(database.exec(mayor));
 	}
 	attempt.onblocked = function() {

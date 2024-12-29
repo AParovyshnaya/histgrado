@@ -4,9 +4,7 @@ export const drawMayor = (data) => _mayor(data);
 
 function _mayor(data) {
 	const description = container();
-	console.log(data)
 	const info = reform(data[0]);
-	console.log(info);
 	content((is("surname") + is("name", " ") + is("patronymic", " ") + is("grade", ", ")), "h2");
 	if (has("pedigree")) { content("Происхождение:" + is("pedigree", " ", " неизвестно", true))	}
 	if (has("friend")) { content("Общеизвестный приятель:" + is("pedigree", " ", " отсутствует", true))	}
